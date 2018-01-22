@@ -1,0 +1,58 @@
+﻿<html> <head> <meta charset="utf-8"> <title>Welcome, {{ username }}</title>
+
+<style>
+	* {margin: 0;padding: 0}
+	#sort {width: 210px;margin: 100px auto;overflow: hidden;border: 1px solid #000;padding: 20px;position: relative}
+	#sort h4 {text-align: center;margin-bottom: 10px}
+	#sort .a1 {position: absolute;top: 20px;left: 20px;}
+	#sort .a2 {position: absolute;top: 20px;right: 20px;}
+	#sort .week {height: 30px;line-height: 20px;border-bottom: 1px solid #000;margin-bottom: 10px}
+	#sort .week li {float: left;width: 30px;height: 30px;text-align: center;list-style: none;}
+	#sort .dateList {overflow: hidden;clear: both}
+	#sort .dateList li {float: left;width: 30px;height: 30px;text-align: center;line-height: 30px;list-style: none;}
+	#sort .dateList .ccc {color: #ccc;}
+	#sort .dateList .red {background: #F90;color: #fff;}
+	#sort .dateList .sun {color: #f00;}
+</style>
+<script>
+	function bubbleSort() {
+	    var beforesorted = document.getElementById("beforesorteddata").value;
+		window.location.href="bubblesort?beforesorteddata="+beforesorted;
+	}
+function choiceSort() {
+	window.location.href="exit";
+}
+function insertSort() {
+	window.location.href="exit";
+}
+function shellSort() {
+	window.location.href="exit";
+}
+function quickSort() {
+	window.location.href="exit";
+}
+function heapSort() {
+	window.location.href="exit";
+}
+function exit() {
+	window.location.href="exit";
+}
+	</script>
+</head>
+<body>
+	<div id="sort">
+		<h4>SORT ALGORITHM</h4>
+			<label class="control-label">Before Sort:</label>
+			<p><input type="text" name="beforesorteddata" style="width:200px"  id="beforesorteddata" value=""></p>
+			<label class="control-label">After Sort:</label>
+			<p><input type="text" name="aftersorteddata" style="width:200px"  id="aftersorteddata" value=""></p>
+			<p><a href="#" onclick="bubbleSort()">Bubble</a></p>
+			<p><a href="#" onclick="choiceSort()">Choice</a></p>
+			<p><a href="#" onclick="insertSort()">Insert</a></p>
+			<p><a href="#" onclick="shellSort()">Shell</a></p>
+			<p><a href="#" onclick="quickSort()">Quick</a></p>
+			<p><a href="#" onclick="heapSort()">Heap</a></p>
+			<p><input type="button" onclick="exit()" value="Exit"/></p>
+	</div>
+</body>
+</html>
